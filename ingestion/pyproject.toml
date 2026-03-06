@@ -4,15 +4,17 @@ version = "0.1.0"
 description = ""
 authors = ["Celicja <lxqd@wp.pl>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.12,<3.13"
 pandas = "^3.0.1"
 requests = "^2.32.5"
 psycopg2-binary = "^2.9.11"
 python-dotenv = "^1.2.2"
 pydantic = "^2.12.5"
-sqlalchemy = "^2.0.48"
+sqlalchemy = "^1.4.49"
+apache-airflow = "^2.9.1"
 
 
 [build-system]
