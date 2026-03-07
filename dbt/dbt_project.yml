@@ -1,0 +1,22 @@
+name: ecommerce_analytics
+version: "1.0"
+
+profile: ecommerce
+
+model-paths: ["models"]
+target-path: "target""
+clean-targets:
+  - "target"
+
+models:
+  ecommerce_analytics:
+
+    staging:
+      materialized: view
+      schema: staging
+
+    marts:
+      materialized: table
+      schema: marts
+
+

@@ -22,12 +22,12 @@ with DAG(
 
     dbt_run = BashOperator(
         task_id="dbt_run",
-        bash_command="docker exec ecommerce_dbt dbt run",
+        bash_command="docker exec ecommerce_dbt dbt run --project-dir /usr/app",
     )
 
     dbt_test = BashOperator(
         task_id="dbt_test",
-        bash_command="docker exec ecommerce_dbt dbt test",
+        bash_command="docker exec ecommerce_dbt dbt test --project-dir /usr/app",
     )
 
     ingestion >> dbt_run >> dbt_test

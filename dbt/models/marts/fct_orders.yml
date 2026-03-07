@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "Fact table with calculated order values"
+
+    columns:
+
+      - name: invoice_id
+        tests:
+          - not_null
+
+      - name: total_price
+        tests:
+          - not_null
